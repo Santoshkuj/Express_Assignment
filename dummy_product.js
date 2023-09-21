@@ -1,9 +1,9 @@
 const http = require('http');
-const port = 3021;
+const port = 3023;
 const server = http.createServer((req,res) => {
     if (req.url == '/'){
         res.statusCode = 200;
-        res.setHeader('content-Type','plain/text')
+        res.setHeader('content-Type','text/plain')
         res.end("We:come to Men & Women Dummy Data")
     } else if(req.url == 'men') {
         res.statusCode = 200;
@@ -138,7 +138,7 @@ const server = http.createServer((req,res) => {
         )
     }else if(req.url=='/other'){
         res.statusCode = 400;
-        res.setHeader('content-Type','plain/text')
+        res.setHeader('content-Type','text/plain')
         res.end("Page not found")
     }
 } 
